@@ -1,0 +1,37 @@
+<p>The LOOP package provides a library of classes implemented using its models.
+All classes included in its library were created or derived from actual implementations used in either academic or commercial applications, and many are reused in more than one application.
+Therefore, even though the classes presented here are provided mainly as use examples of LOOP models they are very useful for construction of software applications.</p>
+
+<p>Most of these classes were initially created as Lua conventional modules and were later converted to classes so it is straightforward to convert them back to modules that don't lay on LOOP.
+Some of these classes can even be used as an instance of itself thus avoiding the creation of singleton objects.
+However, in some scenarios, it is interesting to be able to have multiple instances.
+The LOOP Class Library is organized in six groups as presented below.</p>
+
+<h2><a name="object">Objects</a></h2>
+
+<p>This group contains classes that implement usual features offered by most object models.
+Examples are a delegation model and a simple class to describe exception as objects.</p>
+
+<dl>
+
+<dt><a href="object/Exception.html">Exception Object</a></dt>
+<dd>
+	<p>Class of objects used to store structured error information that may be captured and processed by an application or used to produce human-readable error messages.
+	This class is useful to implement expection handling mechanisms.</p>
+</dd>
+
+<dt><a href="object/Wrapper.html">Object Wrapper</a></dt>
+<dd>
+	<p>Class of objects that create a wrapper around an object using an efficient delegation model that allows execution of delegated methods with the state of the delegated object, <i>i.e.</i> by replacing the <code>self</code> parameter.
+	This class is useful to implement wrappers that overwrites some of the operations of an object.</p>
+</dd>
+
+<dt><a href="object/Publisher.html">Event Publisher</a></dt>
+<dd>
+	<p>Class of objects that delegate all method executions to a group of subscriber objects.
+	Such objects behave like instances of <a href="Wrapper.html">Wrapper</a> but delegate method invocations to a group of objects instead of a single one.
+	This class is useful to implement event notification mechanisms or to let event notifications destined for a single object to be captured by many.</p>
+</dd>
+
+</dl>
+
